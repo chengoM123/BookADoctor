@@ -1,0 +1,38 @@
+import React, {useState, useEffect} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import CheckBox from '@react-native-community/checkbox';
+
+interface CheckboxtProps{
+    text: string;
+}
+
+
+const Checkbox: React.FC<CheckboxtProps> = props => {
+  const [isCheck, setIsCheck] = useState<boolean>(false);
+
+    return(
+        <View style={styles.viewStyle}>
+            <CheckBox style={styles.checkboxStyle}
+                      value={isCheck}
+                      onValueChange={newCheck => setIsCheck(newCheck)} />
+            <Text style={styles.checkboxTextStyle} > {props.text} </Text>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    viewStyle:{
+        flexDirection: 'row',
+        alignSelf: 'center'
+    },
+    checkboxStyle:{
+        alignSelf:'flex-end'
+    },
+    checkboxTextStyle:{
+        fontSize:15,
+        textAlign:'right',
+        marginTop:5
+    }
+})
+
+export default Checkbox;
