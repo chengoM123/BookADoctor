@@ -4,6 +4,7 @@ import CheckBox from '@react-native-community/checkbox';
 
 interface CheckboxtProps{
     text: string;
+    val: boolean;
 }
 
 
@@ -13,7 +14,7 @@ const Checkbox: React.FC<CheckboxtProps> = props => {
     return(
         <View style={styles.viewStyle}>
             <CheckBox style={styles.checkboxStyle}
-                      value={isCheck}
+                      value={props.val}
                       onValueChange={newCheck => setIsCheck(newCheck)} />
             <Text style={styles.checkboxTextStyle} > {props.text} </Text>
         </View>

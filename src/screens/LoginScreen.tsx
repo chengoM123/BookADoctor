@@ -16,8 +16,8 @@ const LogginScreen = () =>{
             <TextInp placeHolderText={"Email"} secureTextEntry={false} keyboardType={"email-address"}/>
             <TextInp placeHolderText={"Password"} secureTextEntry={true} keyboardType={"default"}/>
             <Text style={styles.passwordStyle}>At least 6 characters</Text>
-            <Checkbox text={"I am a doctor"}/>
-            <Checkbox text={"I am a patient"}/>
+            <Checkbox text={"I am a patient"} val={true}/>
+            <Checkbox text={"I am a doctor"} val={false}/>
             <FlatButton buttonText={"Login"} onPressEvent={makeLogin}/>
             <Image style={styles.imageStyle} source={require('../../assets/doctor.png')}/>
         </View>
