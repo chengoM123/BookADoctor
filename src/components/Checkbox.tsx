@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 
-interface CheckboxtProps{
+interface CheckboxProps{
     text: string;
     val: boolean;
 }
 
 
-const Checkbox: React.FC<CheckboxtProps> = props => {
+const Checkbox: React.FC<CheckboxProps> = props => {
   const [isCheck, setIsCheck] = useState<boolean>(false);
 
     return(
